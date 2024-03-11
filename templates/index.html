@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Bank Churn Machine Learning Web App</title>
+</head>
+<body>
+    <h1>Bank Customer Churn Machine Learning Model</h1>
+    <div>Enter some info to predict whether customer is likely to leave bank</div>
+    <form action="{{url_for('predict')}}" method="post" class="predictor-form">
+            <div class="gender-input">
+                <label for="">Gender</label>
+                <input type="text" name="gender" id="gender" required />
+            </div>
+            <div class="age-input">
+                <label for="">Age</label>
+                <input type="number" name="age" id="age" required />
+            </div>
+            <div class="salary-input">
+                <label for="">Estimated Salary</label>
+                <input type="number" name="salary" id="salary" required />
+            </div>
+            <div class="balance-input">
+                <label for="">Balance</label>
+                <input type="number" name="balance" id="balance" required />
+            </div>
+            <div class="credit-score-input">
+                <label for="">Credit Score</label>
+                <input type="number" name="credit-score" id="credit-score" required />
+            </div>
+            <div class="credit-card-input">
+                <label for="">Credit Card</label>
+                <input type="number" name="credit-card" id="credit-card" required />
+            </div>
+            <div class="num-acct-input">
+                <label for="">Number of Accounts </label>
+                <input type="number" name="num-acct" id="num-acct" required />
+            </div>
+            <div class="predictor-button">
+                <input type="submit" value="Predict Customer Churn Risk" />
+              </div>
+    </form>
+    <div>{{prediction_text}}</div>
+
+</body>
+</html>
