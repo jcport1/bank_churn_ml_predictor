@@ -5,9 +5,9 @@
 Utilized machine learning through scikit-learn to predict the outcome of whether banking customers were likely to churn . Implemented machine learning model by using a random forest algorithm to determine two types of classes in target vector: Churn or No Churn.
 
 ## Built With
-![Python](https://img.shields.io/badge/python-3776AB?logo=python&color=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit-learn?logo=scikit-learn&labelColor=000&color=000)
-![Jupyter Notebook](https://img.shields.io/badge/jupyter-3776AB?logo=jupyter&color=white)
+- ![Python](https://img.shields.io/badge/python-3776AB?logo=python&color=white)
+- ![Scikit-Learn](https://img.shields.io/badge/scikit-learn?logo=scikit-learn&labelColor=34495e&color=34495e)
+- ![Jupyter Notebook](https://img.shields.io/badge/jupyter-3776AB?logo=jupyter&color=white)
 
 
 ## Setup
