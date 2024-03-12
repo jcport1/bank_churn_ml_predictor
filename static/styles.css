@@ -1,0 +1,89 @@
+/* --------------------------------------- */
+/* ----- Basic Setup ----- */
+/* --------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --font-stack: 'Arial', sans-serif;
+    --bg-color: rgb(236, 240, 241);
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    /* background-color: aqua; */
+}
+
+/* --------------------------------------- */
+/* ----- Heading ----- */
+/* --------------------------------------- */
+
+.main-heading {
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    
+    /* background-color: pink; */
+
+}
+
+.main-heading h1 {
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+.heading-text {
+    padding: 2rem;
+    font-size: 2.2rem;
+}
+
+/* --------------------------------------- */
+/* ----- Main Content ----- */
+/* --------------------------------------- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
+    /* background-color: purple; */
+}
+
+.form-container {
+
+    padding: 2rem;
+    height: auto;
+    width: 35rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 2rem;
+
+    /* background-color: green; */
+
+}
+
+.prediction-text {
+    font-size: 1.8rem;
+}

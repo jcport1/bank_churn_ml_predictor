@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="/static/styles.css" />
     <title>Bank Churn Machine Learning Web App</title>
 </head>
 <body>
-    <h1>Bank Customer Churn Machine Learning Model</h1>
-    <div>Enter some info to predict whether customer is likely to leave bank</div>
-    <form action="{{url_for('predict')}}" method="post" class="predictor-form">
+    <div class="main-heading">
+        <h1>Bank Customer Churn Machine Learning Model</h1>
+        <div class="heading-text">Enter some info to predict whether customer is likely to leave bank</div>
+    </div>
+    <div class="main-content">
+        <form action="{{url_for('predict')}}" method="post" class="form-container">
             <div class="gender-input">
-                <label for="">Gender</label>
-                <input type="text" name="gender" id="gender" required />
+                <div>Gender</div>
+                <label for="">Female</label>
+                <input type="radio" name="gender" id="gender1" value="0" required />
+
+                <label for="">Male</label>
+                <input type="radio" name="gender" id="gender2" value="1" required />
             </div>
             <div class="age-input">
                 <label for="">Age</label>
@@ -20,7 +27,7 @@
             </div>
             <div class="salary-input">
                 <label for="">Estimated Salary</label>
-                <input type="number" name="salary" id="salary" required />
+                <input type="range" name="salary" id="salary" min="0" max="100000" list="values" required />
             </div>
             <div class="balance-input">
                 <label for="">Balance</label>
@@ -31,18 +38,34 @@
                 <input type="number" name="credit-score" id="credit-score" required />
             </div>
             <div class="credit-card-input">
-                <label for="">Credit Card</label>
-                <input type="number" name="credit-card" id="credit-card" required />
+                <div>Credit Card</div>
+
+                <label for="">Yes</label>
+                <input type="radio" name="credit-card" id="credit1" value="1" required />
+
+                <label for="">No</label>
+                <input type="radio" name="credit-card" id="credit0" value="0" required />
+            
             </div>
+            <!-- drop down for options 1 - 4  -->
             <div class="num-acct-input">
                 <label for="">Number of Accounts </label>
                 <input type="number" name="num-acct" id="num-acct" required />
             </div>
+            <div class="tenure-input">
+                <label for="">Tenure </label>
+                <input type="number" name="tenure" id="tenure" required />
+            </div>
             <div class="predictor-button">
-                <input type="submit" value="Predict Customer Churn Risk" />
+                <input type="submit" value="Predict Customer Risk" />
               </div>
-    </form>
-    <div>{{prediction_text}}</div>
+        </form>
+        {% if prediction_text %}
+        <div class="prediction-text">{{prediction_text}}</div>
+        {% else %}
+        {% endif %}
+    </div>
+    
 
 </body>
 </html>
